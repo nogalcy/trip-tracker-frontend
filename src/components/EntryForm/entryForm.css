@@ -1,0 +1,42 @@
+.entryForm label {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.entryForm textarea,
+.entryForm input {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+    background-color: #444444;
+    color: #e0e0e0;
+}
+
+.entryForm button {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem 0;
+    display: block;
+    width: 100%;
+    background-color: #444444;
+    color: #e0e0e0;
+}
+
+.entryForm .maintitle {
+    font-size: 2rem;
+    margin: 0.5rem 0 2rem 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.mapboxgl-popup-close-button {
+    color: #ffffff;
+}
+
+.alert {
+    color: #f05305;
+}

@@ -1,0 +1,69 @@
+.navigationButtons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar-dropdown, .help-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px; /* Add some spacing between the buttons */
+  }
+  
+  .avatar-dropdown .avatar, .help-dropdown .help-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #935be1; 
+  }
+  
+  .avatar-dropdown .avatar img, .help-dropdown .help-icon img {
+    width: 80%;
+    height: auto;
+    display: block;
+  }
+  
+  .avatar-dropdown .dropdown-toggle::after, .help-dropdown .dropdown-toggle::after {
+    display: none; 
+  }
+  
+  .dropdown-menu {
+    background-color: #333333;
+  }
+  
+  .dropdown-item {
+    color: #E0E0E0;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #935be1;
+    color: #ffffff;
+  }
+  
+  .help-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    border: 1px solid #935be1;
+    padding: 20px;
+    z-index: 1000; 
+  }
+
+  .help-text p {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .help-text li {
+    font-size: 1rem;
+  }
+  

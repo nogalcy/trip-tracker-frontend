@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .marker.red path {
+    fill: #54219b;
+  }
+  
+  .marker.yellow path {
+    fill: #935be1;
+  }
+  
+  .mapboxgl-popup-content {
+    min-width: 40vw;
+    max-width: 40vw;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+  }
+  
+  .popup {
+    max-width: 40vw !important;
+    padding: 1rem !important;
+    background: #333333;
+  }
+  
+  

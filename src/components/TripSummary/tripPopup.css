@@ -1,0 +1,74 @@
+.trip-text {
+    word-wrap: break-word;
+    text-align: center; /* Center-align text content */
+}
+
+.title {
+    color: #E0E0E0;
+    font-size: 3rem;
+}
+
+.imagecontainer img {
+    max-width: 95%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.commentTitle,
+.descriptionTitle {
+    color: #E0E0E0;
+    font-size: 2rem;
+    margin: 10px auto;
+}
+
+.trip-text p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+.visitDate, .updateDate,
+.rating {
+    color: #E0E0E0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.updateButton {
+    background-color: #0f5132;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.deleteButton {
+    background-color: #8d021f;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.updateButton:hover {
+    background-color: #0b6e4f;
+}
+.deleteButton:hover {
+    background-color: #d21f3c;
+}
