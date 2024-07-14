@@ -9,18 +9,22 @@ import logo from './logo.svg';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     try {
       const loginData = { email, password };
-      const user = await loginUser(loginData);
-      if(user) {
+      const result = await loginUser(loginData);
+      if(result.user) {
         navigate('/map');
+      } else {
+        setError(result.error);
       }
     } catch (error) {
-      console.error(error);
+      setError("Login Failed. Please try again.");
     }
   };
 
@@ -36,6 +40,11 @@ const Login = () => {
             </div>
             <h2 className="fs-6 fw-normal text-center text-light mb-4 " style={{ marginTop: '30px' }}>Enter your details to log in</h2>
             <form onSubmit={handleSubmit}>
+              {error && (
+                  <div className="alert alert-danger" role="alert">
+                    {error}
+                  </div>
+              )}
               <div className="row gy-2 overflow-hidden">
                 <div className="col-12">
                   <div className="form-floating mb-3">

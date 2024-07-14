@@ -1,4 +1,7 @@
+import { json } from "react-router-dom";
+
 const API_URL = 'https://trip-tracker-backend.onrender.com';
+// const API_URL = 'http://localhost:1337';
 
 export async function listLogEntries() {
     const token = localStorage.getItem('token');
@@ -31,8 +34,13 @@ export async function registerUser(userData) {
         },
         body: JSON.stringify(userData),
     });
-    console.log(response);
-    return response.json();
+    const data = await response.json();
+    if (data.user) {
+        localStorage.setItem('token', data.token);
+        return {user: data.user}
+    } else {
+        return {error: "Email already registered!"};
+    }
 }
 
 export async function loginUser(loginData) {
@@ -46,9 +54,9 @@ export async function loginUser(loginData) {
     const data = await response.json();
     if (response.ok && data.message === "Success") {
         localStorage.setItem('token', data.token);
-        return data.user;
+        return {user: data.user};
     } else {
-        throw new Error(data.error);
+        return {error: data.message};
     }
 }
 
