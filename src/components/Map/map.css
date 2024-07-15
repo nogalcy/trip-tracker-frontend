@@ -29,5 +29,21 @@ body {
     padding: 1rem !important;
     background: #333333;
   }
+
+  @media (max-width: 768px) {
+    .mapboxgl-popup-content {
+      min-width: 90vw;
+      max-width: 90vw;
+      padding: 10px;
+      border-radius: 5px;
+      background: linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+    }
+
+    .popup {
+      max-width: 90vw !important;
+      padding: 1rem !important;
+      background: #333333;
+    }
+}
   
   
