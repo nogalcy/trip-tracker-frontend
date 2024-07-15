@@ -51,6 +51,17 @@ body {
     color: #e0e0e0;
 }
 
+@media (max-width: 768px) {
+    .profile-nav {
+        flex-direction: column; 
+        margin-bottom: 10px;
+    }
+
+    .profile-nav button {
+        margin: 5px 0; 
+    }
+}
+
 .profile-content {
     width: 100%;
     flex-grow: 1;

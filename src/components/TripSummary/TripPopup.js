@@ -14,7 +14,7 @@ const TripPopup = ({ selectedEntry, onDelete, onUpdate}) => {
 
     return (
         <div className="trip-text">
-            <h2 className="title">📍{selectedEntry.title}📍</h2>
+            <h2 className="title">{selectedEntry.title}</h2>
             <div className="details">
                 <p className="visitDate"><strong>Visited:</strong> {formatDate(selectedEntry.visitDate)}</p>
                 <p className="updateDate"><strong>Last Updated:</strong> {formatDate(selectedEntry.updatedAt)}</p>

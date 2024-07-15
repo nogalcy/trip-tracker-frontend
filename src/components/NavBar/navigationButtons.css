@@ -66,4 +66,26 @@
   .help-text li {
     font-size: 1rem;
   }
+
+@media (max-width: 768px) {
+  .navigationButtons {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      top: 10px;
+      right: 10px;
+  }
+
+  .avatar-dropdown, .help-dropdown {
+      margin: 5px 0; /* Reduce margin for smaller screens */
+  }
+
+  .avatar-dropdown .avatar, .help-dropdown .help-icon {
+      width: 40px; /* Reduce size for smaller screens */
+      height: 40px;
+  }
+
+  .avatar-dropdown .avatar img, .help-dropdown .help-icon img {
+      width: 70%;
+      height: auto;
+  }
+}
   
