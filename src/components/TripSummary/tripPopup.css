@@ -37,8 +37,15 @@
 
 .details {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 10px; 
+}
+
+.detail-item {
+    flex: 1 0 100%;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .buttons {
