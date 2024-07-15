@@ -1,7 +1,7 @@
 import React from "react";
 import './tripPopup.css';
 
-const TripPopup = ({ selectedEntry, onDelete, onUpdate}) => {
+const TripPopup = ({ selectedEntry, onDelete, onUpdate }) => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', {
@@ -16,23 +16,23 @@ const TripPopup = ({ selectedEntry, onDelete, onUpdate}) => {
         <div className="trip-text">
             <h2 className="title">{selectedEntry.title}</h2>
             <div className="details">
-                <div className="detail-item" >
-                    <p className="visitDate"><strong>Visited:</strong></p>
-                    <p className="visitDate">{formatDate(selectedEntry.visitDate)}</p>
+                <div className="detail-item">
+                    <p className="label"><strong>Visited:</strong></p>
+                    <p className="value">{formatDate(selectedEntry.visitDate)}</p>
                 </div>
-                <div className="detail-item" >
-                    <p className="updateDate"><strong>Last Updated:</strong></p>
-                    <p className="updateDate">{formatDate(selectedEntry.updatedAt)}</p>
+                <div className="detail-item">
+                    <p className="label"><strong>Last Updated:</strong></p>
+                    <p className="value">{formatDate(selectedEntry.updatedAt)}</p>
                 </div>
-                <div className="detail-item" >
-                    <p className="rating"><strong>Rating:</strong></p>
-                    <p className="rating">{selectedEntry.rating} / 10</p>
+                <div className="detail-item">
+                    <p className="label"><strong>Rating:</strong></p>
+                    <p className="value">{selectedEntry.rating} / 10</p>
                 </div>
             </div>
             {
                 selectedEntry.image && (
                     <div className="imagecontainer">
-                        <img src={selectedEntry.image} alt="image"/>
+                        <img src={selectedEntry.image} alt="image" />
                     </div>
                 )
             }

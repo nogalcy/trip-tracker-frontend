@@ -1,11 +1,33 @@
 .trip-text {
     word-wrap: break-word;
-    text-align: center; 
+    text-align: center; /* Center-align text content */
 }
 
 .title {
     color: #E0E0E0;
     font-size: 3rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    margin: 20px 0; /* Add margin for spacing from title */
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.label {
+    color: #E0E0E0;
+    font-size: 1rem;
+    margin-bottom: 5px; /* Space between label and value */
+}
+
+.value {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 5px; /* Space between label and value */
 }
 
 .imagecontainer img {
@@ -26,26 +48,6 @@
     color: #e0e0e0;
     font-size: 1rem;
     margin: 10px auto;
-}
-
-.visitDate, .updateDate,
-.rating {
-    color: #E0E0E0;
-    font-size: 1rem;
-    margin: 0;
-}
-
-.details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px; 
-}
-
-.detail-item {
-    flex: 1 0 100%;
-    margin: 10px 0;
-    text-align: center;
 }
 
 .buttons {
