@@ -7,6 +7,12 @@ import Profile from './components/Profile/Profile.js';
 import UserInfo from './components/UserInfo/UserInfo.js';
 import FavoriteTrips from './components/FavoriteTrips/FavoriteTrips.js';
 
+const isAuthenticated = () => !!localStorage.getItem('token');
+
+const ProtectedRoute = ({element}) => {
+  return isAuthenticated() ? element : <Navigate to="/login" />;
+}
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,11 +20,10 @@ const App = () => {
         <Route path='/' element={<Navigate to='/register' />}></Route>
         <Route path='/register' element={<SignUp />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/map' element={<Map />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
-        <Route path='/profile/favorites' element={<FavoriteTrips />}></Route>
-        <Route path='/profile/user-information' element={<UserInfo />}></Route>
-        <Route path='*' element={<Navigate to='/register' />} />
+        <Route path='/map' element={<ProtectedRoute element={<Map />} />}></Route>
+        <Route path='/profile' element={<ProtectedRoute element={<Profile />} />}></Route>
+        <Route path='/profile/favorites' element={<ProtectedRoute element={<FavoriteTrips />} />}></Route>
+        <Route path='/profile/user-information' element={<ProtectedRoute element={<UserInfo />} />}></Route>
       </Routes>
     </BrowserRouter>
   );
