@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/profile/favorites' element={<FavoriteTrips />}></Route>
         <Route path='/profile/user-information' element={<UserInfo />}></Route>
         <Route path='/' element={<Navigate to='/login' />}></Route>
-        <Route path='*' element={<Navigate to='/register' />}></Route>
+        <Route path='*' element={<SignUp />}></Route>
       </Routes>
     </BrowserRouter>
   );
