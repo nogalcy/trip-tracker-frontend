@@ -11,15 +11,16 @@ const RecentTrips = () => {
     const fetchRecentTrips = async () => {
       try {
         const data = await listRecentTrips();
-        console.log(data);
-        setRecentTrips(data); 
-      } catch (error) {
-        if (error.response && error.response.status === 401) {
-          localStorage.removeItem('token');
-          window.location.href = '/login';
+        if (!data.ok) {
+          if (data.error.status == 401) {
+            localStorage.removeItem('token');
+            window.location.href('/login');
+          }
         } else {
-          console.error('Error fetching recent trips:', error);
+          setRecentTrips(data); 
         }
+      } catch (error) {
+        console.log(error);
       }
     };
 
