@@ -3,15 +3,24 @@ import '../FavoriteTrips/trips.css';
 import { listRecentTrips } from '../../api/api';
 
 const RecentTrips = () => {
-  const [recentTrips, setRecentTrips] = useState([]);
+  const [trips, setTrips] = useState([]);
 
   useEffect(() => {
-    const fetchRecentTrips = async () => {
-      const trips = await listRecentTrips();
-      setRecentTrips(trips);
+    const fetchTrips = async () => {
+      try {
+        const data = await listRecentTrips();
+        setTrips(data); 
+      } catch (error) {
+        if (error.response && error.response.status === 401) {
+          localStorage.removeItem('token');
+          window.location.href = '/login'; 
+        } else {
+          console.error('Error fetching recent trips:', error);
+        }
+      }
     };
 
-    fetchRecentTrips();
+    fetchTrips();
   }, []);
 
   return (
