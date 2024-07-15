@@ -2,25 +2,27 @@ import React, { useEffect, useState } from 'react';
 import '../FavoriteTrips/trips.css';
 import { listRecentTrips } from '../../api/api';
 
+
+
 const RecentTrips = () => {
-  const [trips, setTrips] = useState([]);
+  const [recentTrips, setRecentTrips] = useState([]);
 
   useEffect(() => {
-    const fetchTrips = async () => {
+    const fetchRecentTrips = async () => {
       try {
         const data = await listRecentTrips();
-        setTrips(data); 
+        setRecentTrips(data); 
       } catch (error) {
         if (error.response && error.response.status === 401) {
           localStorage.removeItem('token');
-          window.location.href = '/login'; 
+          window.location.href = '/login';
         } else {
           console.error('Error fetching recent trips:', error);
         }
       }
     };
 
-    fetchTrips();
+    fetchRecentTrips();
   }, []);
 
   return (
