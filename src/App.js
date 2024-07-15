@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import SignUp from './components/Auth/Signup.js';
 import Login from './components/Auth/Login.js';
 import Map from './components/Map/Map.js';
@@ -15,7 +15,7 @@ const ProtectedRoute = ({element}) => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Navigate to='/register' />}></Route>
         <Route path='/register' element={<SignUp />}></Route>
@@ -25,7 +25,7 @@ const App = () => {
         <Route path='/profile/favorites' element={<ProtectedRoute element={<FavoriteTrips />} />}></Route>
         <Route path='/profile/user-information' element={<ProtectedRoute element={<UserInfo />} />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

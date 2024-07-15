@@ -1,6 +1,6 @@
 import { json } from "react-router-dom";
 
-const API_URL = 'https://trip-tracker-backend.onrender.com';
+const API_URL = 'https://trip-tracker-backend.onrender.com/#';
 // const API_URL = 'http://localhost:1337';
 
 export async function listLogEntries() {
