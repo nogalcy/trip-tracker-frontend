@@ -11,6 +11,7 @@ const RecentTrips = () => {
     const fetchRecentTrips = async () => {
       try {
         const data = await listRecentTrips();
+        console.log(data);
         setRecentTrips(data); 
       } catch (error) {
         if (error.response && error.response.status === 401) {
