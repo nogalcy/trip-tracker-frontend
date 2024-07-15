@@ -5,6 +5,7 @@ const TripPopup = ({ selectedEntry, onDelete, onUpdate}) => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', {
+            timeZone: 'UTC',
             year: 'numeric',
             month: 'long',
             day: 'numeric'

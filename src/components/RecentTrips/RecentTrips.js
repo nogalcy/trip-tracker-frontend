@@ -11,9 +11,7 @@ const RecentTrips = () => {
     const fetchRecentTrips = async () => {
       try {
         const data = await listRecentTrips();
-        console.log(data)
         if (data.error) {
-          console.log("here");
           localStorage.removeItem('token');
           window.location.href('/#/login');
         } else {
