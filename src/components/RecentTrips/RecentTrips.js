@@ -13,10 +13,9 @@ const RecentTrips = () => {
         const data = await listRecentTrips();
         console.log(data)
         if (data.error) {
-          if (data.error.status == 401) {
-            localStorage.removeItem('token');
-            window.location.href('/login');
-          }
+          console.log("here");
+          localStorage.removeItem('token');
+          window.location.href('/#/login');
         } else {
           setRecentTrips(data); 
         }
