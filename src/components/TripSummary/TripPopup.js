@@ -16,9 +16,12 @@ const TripPopup = ({ selectedEntry, onDelete, onUpdate}) => {
         <div className="trip-text">
             <h2 className="title">{selectedEntry.title}</h2>
             <div className="details">
-                <p className="visitDate"><strong>Visited:</strong> {formatDate(selectedEntry.visitDate)}</p>
-                <p className="updateDate"><strong>Last Updated:</strong> {formatDate(selectedEntry.updatedAt)}</p>
-                <p className="rating"><strong>Rating:</strong> {selectedEntry.rating} / 10</p>
+                <p className="visitDate"><strong>Visited:</strong></p>
+                <p className="visitDate"><strong>{formatDate(selectedEntry.visitDate)}</strong></p>
+                <p className="updateDate"><strong>Last Updated:</strong></p>
+                <p className="updateDate"><strong>{formatDate(selectedEntry.updatedAt)}</strong></p>
+                <p className="rating"><strong>Rating:</strong></p>
+                <p className="rating"><strong>{selectedEntry.rating} / 10</strong></p>
             </div>
             {
                 selectedEntry.image && (
