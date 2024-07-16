@@ -1,3 +1,5 @@
+### This is only the front-end as deploying on Render is easier when projects are split. The link to the backend code is [here](https://github.com/nogalcy/trip-tracker-backend)
+
 ### Finished Front-end for Trip Tracker
 
 * React.js and Node.js frontend, Bootstrap used for basic css components and then specified with the individual css files
